@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: flame-stock
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 121.37.231.106:8848
+        username: nacos
+        password: nacos
+      config:
+        server-addr: 121.37.231.106:8848
+        username: nacos
+        password: nacos
+        namespace: b0434416-5aeb-453d-ac3e-0829578046d3
+        group: dev
+        file-extension: yaml
+        extension-configs:
+          - data-id: flame-stock.yml
+            group: dev
+            refresh: true
+
+
+
+
+
+
+

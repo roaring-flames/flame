@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  cn.csg.component.kafka.config.KafkaAutoConfiguration,\
+  cn.csg.component.kafka.KafkaRegistrar

@@ -1,0 +1,29 @@
+#spring:
+#  kafka:
+#    producer:
+#      bootstrap-servers: 168.168.3.230:9092
+#      batch-size: 16384
+#      buffer-memory: 33554432
+#      properties:
+#        max:
+#          request:
+#            size: 2097152
+#      retries: 5
+#      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+#      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+#    consumer:
+#      bootstrap-servers: 168.168.3.230:9092
+#      auto-offset-reset: latest
+#      #?????????
+#      enable-auto-commit: false
+#      #auto-commit-interval: 100
+#      auto:
+#        commit:
+#          interval:
+#            ms: 100
+#      max-poll-records: 25000
+#      session-timeout: 40000
+#    listener:
+#      concurrency: 2
+#
+#
