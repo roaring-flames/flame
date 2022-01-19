@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: flame-sbaserver
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 121.37.231.106:8848
+        username: nacos
+        password: nacos
+      config:
+        server-addr: 121.37.231.106:8848
+        username: nacos
+        password: nacos
+        namespace: 1a3ddbff-7053-4c92-beb8-4f2a723f604b
+        group: dev
+        file-extension: yaml
+        extension-configs:
+          - data-id: flame-sbaserver.yml
+            group: dev
+            refresh: true
+
+
+
+
+

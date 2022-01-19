@@ -17,6 +17,7 @@
     <modules>
         <module>flame-common</module>
         <module>flame-gateway</module>
+        <module>flame-sbaserver</module>
         <module>flame-order</module>
         <module>flame-stock</module>
     </modules>

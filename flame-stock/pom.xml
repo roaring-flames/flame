@@ -7,8 +7,7 @@
         <artifactId>flame</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-
-    <groupId>com.example</groupId>
+    <groupId>com.flame</groupId>
     <artifactId>flame-stock</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>flame-stock</name>

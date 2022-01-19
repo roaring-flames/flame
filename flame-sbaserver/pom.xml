@@ -9,11 +9,11 @@
     </parent>
 
     <groupId>com.flame</groupId>
-    <artifactId>flame-order</artifactId>
+    <artifactId>flame-sbaserver</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>flame-order</name>
+    <name>flame-sbaserver</name>
 
     <dependencies>
         <!--包含sprigcloud和nacos能服务组件-->
@@ -23,11 +23,17 @@
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
-        <!--监控服务-->
+        <!--sprringboot监控-->
         <dependency>
             <groupId>de.codecentric</groupId>
-            <artifactId>spring-boot-admin-starter-client</artifactId>
+            <artifactId>spring-boot-admin-starter-server</artifactId>
             <version>2.5.5</version>
+        </dependency>
+
+        <!--整合权限账号 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
 
     </dependencies>
