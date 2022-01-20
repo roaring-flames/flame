@@ -1,4 +1,4 @@
-package com.flame.order.controller;
+package com.flame.stock.controller;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -13,11 +13,11 @@ import org.springframework.web.bind.annotation.RestController;
  * @date 2022年01月13日 14:54
  * @DOTO:
  */
-@Api(tags = "用户管理")
+@Api(tags = "库存管理")
 @RefreshScope
 @RestController
 @RequestMapping("demo")
-public class DemoCotroller {
+public class StockCotroller {
 
     @Value("${ad.a}")
     private String ad;
