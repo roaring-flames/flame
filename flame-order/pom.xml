@@ -23,6 +23,19 @@
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
+        <!--集成druid连接池-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+        </dependency>
+
+        <!--mybatisplus组件-->
+        <dependency>
+            <groupId>com.flame</groupId>
+            <artifactId>flame-component-mybatisplus</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
         <!--监控服务-->
         <dependency>
             <groupId>de.codecentric</groupId>

@@ -29,7 +29,7 @@
 
         <mysql-connector.version>8.0.20</mysql-connector.version>
 <!--        <admin-starter-server.version>2.5.5</admin-starter-server.version>-->
-        <druid.version>1.1.23</druid.version>
+        <druid.version>1.2.8</druid.version>
 
         <spring-cloud.version>2020.0.5</spring-cloud.version>
         <spring-cloud-alibaba.version>2021.1</spring-cloud-alibaba.version>
@@ -100,9 +100,10 @@
 <!--            </dependency>-->
 
             <!--集成druid连接池-->
+            <!-- https://mvnrepository.com/artifact/com.alibaba/druid -->
             <dependency>
                 <groupId>com.alibaba</groupId>
-                <artifactId>druid-spring-boot-starter</artifactId>
+                <artifactId>druid</artifactId>
                 <version>${druid.version}</version>
             </dependency>
 

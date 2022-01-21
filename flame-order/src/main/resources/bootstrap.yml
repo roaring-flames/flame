@@ -21,7 +21,18 @@ spring:
           - data-id: order.yml
             group: dev
             refresh: true
-
+#seata:
+#  application-id: flame-order
+#  config:
+#    type: nacos
+#    nacos:
+#      username: nacos
+#      password: nacos
+#      group: DEFAULT_GROUP
+#      namespace: d4d08bf9-32c1-463e-aeb3-d2b833530fea
+#  registry:
+#    nacos:
+#      application:
 
 
 
