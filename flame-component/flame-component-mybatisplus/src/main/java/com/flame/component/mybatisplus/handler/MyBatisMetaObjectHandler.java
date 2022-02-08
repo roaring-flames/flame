@@ -24,6 +24,10 @@ public class MyBatisMetaObjectHandler implements MetaObjectHandler {
         this.datacenterId = datacenterId;
     }
 
+    /**
+     * 添加语句自动填充
+     * @param metaObject
+     */
     @Override
     public void insertFill(MetaObject metaObject) {
         log.info("start insert fill ....");
@@ -37,6 +41,10 @@ public class MyBatisMetaObjectHandler implements MetaObjectHandler {
         this.strictInsertFill(metaObject, "delete", Integer.class, CommonEntity.STATUS_NORMAL);
     }
 
+    /**
+     * 更新语句自动填充
+     * @param metaObject
+     */
     @Override
     public void updateFill(MetaObject metaObject) {
         log.info("start update fill ....");

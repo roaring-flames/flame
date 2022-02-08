@@ -99,11 +99,16 @@
 <!--                <version>${admin-starter-server.version}</version>-->
 <!--            </dependency>-->
 
-            <!--集成druid连接池-->
+            <!--集成druid连接池,带有监控界面-->
             <!-- https://mvnrepository.com/artifact/com.alibaba/druid -->
+<!--            <dependency>-->
+<!--                <groupId>com.alibaba</groupId>-->
+<!--                <artifactId>druid</artifactId>-->
+<!--                <version>${druid.version}</version>-->
+<!--            </dependency>-->
             <dependency>
                 <groupId>com.alibaba</groupId>
-                <artifactId>druid</artifactId>
+                <artifactId>druid-spring-boot-starter</artifactId>
                 <version>${druid.version}</version>
             </dependency>
 
