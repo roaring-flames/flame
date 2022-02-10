@@ -33,6 +33,7 @@
 
         <spring-cloud.version>2020.0.5</spring-cloud.version>
         <spring-cloud-alibaba.version>2021.1</spring-cloud-alibaba.version>
+        <nacos.version>2.0.3</nacos.version>
 
         <hutool.version>5.4.0</hutool.version>
         <knife4j.version>2.0.4</knife4j.version>
@@ -56,14 +57,21 @@
                 <version>${spring-cloud-alibaba.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+                <!--排出自带的nacos客户端-->
+                <exclusions>
+                    <exclusion>
+                        <groupId>com.alibaba.nacos</groupId>
+                        <artifactId>nacos-client</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
-            <!--nacos客户端版本-->
-<!--            <dependency>-->
-<!--                <groupId>com.alibaba.nacos</groupId>-->
-<!--                <artifactId>nacos-client</artifactId>-->
-<!--                <version>${nacos.version}</version>-->
-<!--            </dependency>-->
+            <!--nacos客户端版本2.0.3-->
+            <dependency>
+                <groupId>com.alibaba.nacos</groupId>
+                <artifactId>nacos-client</artifactId>
+                <version>${nacos.version}</version>
+            </dependency>
 
             <!--Hutool Java工具包-->
             <dependency>
