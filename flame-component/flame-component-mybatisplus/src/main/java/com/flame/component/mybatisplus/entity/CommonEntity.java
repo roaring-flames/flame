@@ -34,9 +34,9 @@ public class CommonEntity implements Serializable {
     @TableField(fill = FieldFill.INSERT_UPDATE)
     private Date updateTime;
 
-    @ApiModelProperty(value = "状态")
+    @ApiModelProperty(value = "是否删除标识")
     @TableLogic
     @TableField(fill = FieldFill.INSERT_UPDATE)
-    private Integer delete;
+    private Integer deleteFlag;
 
 }
