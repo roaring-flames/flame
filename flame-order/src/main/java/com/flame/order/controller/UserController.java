@@ -2,7 +2,10 @@ package com.flame.order.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
+import com.flame.common.api.stock.dto.StockDTO;
+import com.flame.common.api.stock.service.DemoService;
 import com.flame.order.module.pojo.User;
+import com.flame.order.service.StockCommonService;
 import com.flame.order.service.UserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -29,10 +32,21 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    @Autowired
+    private StockCommonService stockCommonService;
+
+    @Autowired
+    private DemoService demoService;
+
     @ApiOperation(value = "添加")
     @PostMapping("/add")
     public Boolean addUser(@RequestBody User record) {
-        return userService.save(record);
+        userService.addUser(record);
+        StockDTO stockDTO = new StockDTO();
+        stockDTO.setId("1491955339100409858");
+        stockDTO.setStock(99);
+//        demoService.demo();
+        return stockCommonService.decrease(stockDTO);
     }
 
     @ApiOperation(value = "删除")

@@ -78,6 +78,15 @@ spring:
         # 忽略过滤格式
         exclusions: "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*"
 
+mybatisplus:
+  workerId: 1
+  datacenterId: 1
+swagger:
+  title: 订单服务
+  description: 主要提供管理订单能力
+  #扫描包路径
+  url: com.flame.order.controller
+
 ##seata配置
 #seata:
 #  enabled: true

@@ -1,12 +1,14 @@
 package com.flame.stock.controller;
 
+import com.flame.stock.module.pojo.Stock;
+import com.flame.stock.service.StockService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import org.springframework.beans.factory.annotation.Value;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 /**
  * @author king
@@ -16,19 +18,28 @@ import org.springframework.web.bind.annotation.RestController;
 @Api(tags = "库存管理")
 @RefreshScope
 @RestController
-@RequestMapping("demo")
+@RequestMapping("stock")
 public class StockCotroller {
 
-    @Value("${ad.a}")
-    private String ad;
+    @Autowired
+    private StockService stockService;
 
-    @Value("${sa.a}")
-    private String sa;
-
-    @ApiOperation(value = "查询用户",notes = "根据id查询用户")
-    @GetMapping("at")
-    public String getVariablet() {
-        System.out.println(sa);
-        return ad;
+    @ApiOperation(value = "添加")
+    @PostMapping("/add")
+    public Boolean addStock(@RequestBody Stock record) {
+        return stockService.save(record);
     }
+
+    @ApiOperation(value = "修改")
+    @PostMapping("/update")
+    public Boolean updateStock(@RequestBody Stock record) {
+        return stockService.updateStock(record);
+    }
+
+    @ApiOperation(value = "查询列表")
+    @GetMapping("/select")
+    public List<Stock> selectStock() {
+        return stockService.list();
+    }
+
 }

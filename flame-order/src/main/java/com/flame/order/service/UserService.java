@@ -10,5 +10,7 @@ import com.flame.order.module.pojo.User;
  */
 public interface UserService extends IService<User>{
 
+    boolean addUser(User user);
+
 }
 

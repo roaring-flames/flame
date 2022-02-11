@@ -4,6 +4,8 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.flame.order.mapper.UserMapper;
 import com.flame.order.module.pojo.User;
 import com.flame.order.service.UserService;
+import io.seata.core.context.RootContext;
+import io.seata.spring.annotation.GlobalTransactional;
 import org.springframework.stereotype.Service;
 
 /**
@@ -14,8 +16,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {
 
+    @GlobalTransactional
     @Override
-    public boolean save(User entity) {
-        return super.save(entity);
+    public boolean addUser(User user) {
+        System.out.println("事务id:"+ RootContext.getXID());
+        return save(user);
     }
 }

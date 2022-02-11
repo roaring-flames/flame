@@ -20,6 +20,7 @@
         <module>flame-sbaserver</module>
         <module>flame-order</module>
         <module>flame-stock</module>
+        <module>flame-common-api</module>
     </modules>
 
     <properties>

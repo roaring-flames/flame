@@ -20,6 +20,13 @@
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
+        <!--公共服务接口-->
+        <dependency>
+            <groupId>com.flame</groupId>
+            <artifactId>flame-common-api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
         <!--分布式事务seata-->
         <dependency>
             <groupId>io.seata</groupId>
