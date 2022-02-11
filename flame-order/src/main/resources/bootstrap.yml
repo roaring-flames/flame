@@ -21,11 +21,11 @@ spring:
           - data-id: order.yml
             group: dev
             refresh: true
-#    alibaba:
-#      seata:
-##      事务群组，要和下方vgroup-mapping保持一致（可以每个应用独立取名，也可以使用相同的名字），
-##      要与服务端nacos-config.txt中service.vgroup_mapping中存在,并且要保证多个群组情况下后缀名要保持一致-tx_group
-#        tx-service-group: my_test_tx_group
+    alibaba:
+      seata:
+#      事务群组，要和下方vgroup-mapping保持一致（可以每个应用独立取名，也可以使用相同的名字），
+#      要与服务端nacos-config.txt中service.vgroup_mapping中存在,并且要保证多个群组情况下后缀名要保持一致-tx_group
+        tx-service-group: my_test_tx_group
 
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
