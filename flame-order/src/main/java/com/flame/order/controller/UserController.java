@@ -1,7 +1,5 @@
 package com.flame.order.controller;
 
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.flame.common.api.stock.dto.StockDTO;
 import com.flame.common.api.stock.service.DemoService;
 import com.flame.order.module.pojo.User;
@@ -15,8 +13,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
 
 /**
  * @author king
@@ -41,6 +37,7 @@ public class UserController {
     @ApiOperation(value = "添加")
     @PostMapping("/add")
     public Boolean addUser(@RequestBody User record) {
+//        record.setId();
         userService.addUser(record);
         StockDTO stockDTO = new StockDTO();
         stockDTO.setId("1491955339100409858");
@@ -49,28 +46,28 @@ public class UserController {
         return stockCommonService.decrease(stockDTO);
     }
 
-    @ApiOperation(value = "删除")
-    @PostMapping("/delete")
-    public Boolean deleteUser(@RequestBody User record) {
-        QueryWrapper<User> queryWrapper = new QueryWrapper<>();
-        queryWrapper.lambda().eq(User::getId, record.getId());
-        return userService.remove(queryWrapper);
-    }
+//    @ApiOperation(value = "删除")
+//    @PostMapping("/delete")
+//    public Boolean deleteUser(@RequestBody User record) {
+//        QueryWrapper<User> queryWrapper = new QueryWrapper<>();
+//        queryWrapper.lambda().eq(User::getId, record.getId());
+//        return userService.remove(queryWrapper);
+//    }
 
-    @ApiOperation(value = "修改")
-    @PostMapping("/update")
-    public Boolean updateUser(@RequestBody User record) {
-        UpdateWrapper<User> updateWrapper = new UpdateWrapper<>();
-        updateWrapper.lambda().set(User::getUserName, record.getUserName()).eq(User::getId, record.getId());
-        return userService.update(updateWrapper);
-    }
+//    @ApiOperation(value = "修改")
+//    @PostMapping("/update")
+//    public Boolean updateUser(@RequestBody User record) {
+//        UpdateWrapper<User> updateWrapper = new UpdateWrapper<>();
+//        updateWrapper.lambda().set(User::getUserName, record.getUserName()).eq(User::getId, record.getId());
+//        return userService.update(updateWrapper);
+//    }
 
-    @ApiOperation(value = "查询列表")
-    @PostMapping("/select")
-    public List<User> selectUser(@RequestBody User record) {
-        QueryWrapper<User> queryWrapper = new QueryWrapper<>();
-        queryWrapper.lambda().eq(User::getId, record.getId());
-        return userService.list(queryWrapper);
-    }
+//    @ApiOperation(value = "查询列表")
+//    @PostMapping("/select")
+//    public List<User> selectUser(@RequestBody User record) {
+//        QueryWrapper<User> queryWrapper = new QueryWrapper<>();
+//        queryWrapper.lambda().eq(User::getId, record.getId());
+//        return userService.list(queryWrapper);
+//    }
 
 }

@@ -87,6 +87,11 @@ swagger:
   #扫描包路径
   url: com.flame.order.controller
 
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
+  type-aliases-package: com.flame.order.module.pojo
+
+
 ##seata配置
 #seata:
 #  enabled: true

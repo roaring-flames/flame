@@ -1,12 +1,11 @@
 package com.flame.order.module.pojo;
 
-import com.baomidou.mybatisplus.annotation.TableName;
-import com.flame.component.mybatisplus.entity.CommonEntity;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * @author king
@@ -14,11 +13,22 @@ import java.io.Serializable;
  */
 @ApiModel(description = "用户")
 @Data
-@TableName("FLAME_USER")
-public class User extends CommonEntity implements Serializable {
+public class User  implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @ApiModelProperty(value = "用户名")
     private String userName;
+
+    @ApiModelProperty(value = "id")
+    private String id;
+
+    @ApiModelProperty(value = "创建时间")
+    private Date createTime;
+
+    @ApiModelProperty(value = "更新时间")
+    private Date updateTime;
+
+    @ApiModelProperty(value = "是否删除标识")
+    private Integer deleteFlag;
 
 }

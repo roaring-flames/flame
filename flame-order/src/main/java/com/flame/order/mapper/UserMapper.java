@@ -1,6 +1,5 @@
 package com.flame.order.mapper;
 
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.flame.order.module.pojo.User;
 import org.apache.ibatis.annotations.Mapper;
 
@@ -10,7 +9,7 @@ import org.apache.ibatis.annotations.Mapper;
  * @date 2022-02-10 09:20:02
  */
 @Mapper
-public interface UserMapper extends BaseMapper<User> {
+public interface UserMapper  {
 
-
+ int add(User user);
 }

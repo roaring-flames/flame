@@ -17,7 +17,7 @@ import org.springframework.context.annotation.Import;
 //取消数据源自动创建
 @SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
 @EnableFeignClients
-@ComponentScan({"com.flame.common.api","com.flame.order.service","com.flame.order.controller"})
+@ComponentScan({"com.flame.common.api","com.flame.order.service","com.flame.order.controller","com.flame.order.mapper"})
 @Import({Knife4jConfig.class,CorsConfig.class})
 public class FlameOrderApplication {
 
