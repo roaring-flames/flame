@@ -18,20 +18,17 @@ import javax.sql.DataSource;
  */
 @Configuration
 public class DataSourceProxyConfig {
-
     //加载数据库连接池配置
     @Bean("dataSource")
     @ConfigurationProperties(prefix = "spring.datasource")
     public DataSource druidDataSource() {
         return new DruidDataSource();
     }
-
     //使用seata代理数据源
     @Bean
     public DataSourceProxy dataSourceProxy(DataSource dataSource) {
         return new DataSourceProxy(dataSource);
     }
-
     @Bean
     @ConfigurationProperties(prefix = "mybatis-plus")
     public MybatisSqlSessionFactoryBean sqlSessionFactoryBean(@Qualifier("dataSource") DataSource dataSource) {
