@@ -45,6 +45,7 @@ public class UserController {
         StockDTO stockDTO = new StockDTO();
         stockDTO.setId("1491955339100409858");
         stockDTO.setStock(99);
+//        int a=1/0;
 //        demoService.demo();
         return stockCommonService.decrease(stockDTO);
     }

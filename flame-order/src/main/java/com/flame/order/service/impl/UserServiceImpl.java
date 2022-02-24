@@ -19,7 +19,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     @GlobalTransactional
     @Override
     public boolean addUser(User user) {
-        System.out.println("事务id:"+ RootContext.getXID());
+        System.out.println("order事务id:"+ RootContext.getXID());
         return save(user);
     }
 }

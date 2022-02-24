@@ -14,7 +14,7 @@ import java.io.Serializable;
  */
 @ApiModel(description = "用户")
 @Data
-@TableName("FLAME_USER")
+@TableName("flame_user")
 public class User extends CommonEntity implements Serializable {
     private static final long serialVersionUID = 1L;
 
